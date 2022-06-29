@@ -17,6 +17,10 @@
   ],
   "author": "Mohamed Samara (https://github.com/mohamedsamara)",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohamedsamara/vite-react.git"
+  },
   "bugs": {
     "url": "https://github.com/mohamedsamara/vite-react/issues"
   },
