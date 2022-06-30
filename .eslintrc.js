@@ -24,7 +24,9 @@ module.exports = {
       ],
     },
   ],
-  rules: {},
+  rules: {
+    'import/no-unused-modules': [1, { unusedExports: true }],
+  },
   settings: {
     'import/parsers': {
       '@typescript-eslint/parser': ['.ts', '.tsx'],
