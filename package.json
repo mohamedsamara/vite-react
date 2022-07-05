@@ -13,6 +13,7 @@
   "keywords": [
     "vite",
     "react",
+    "react-query",
     "typescript"
   ],
   "author": "Mohamed Samara (https://github.com/mohamedsamara)",
