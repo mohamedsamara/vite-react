@@ -14,6 +14,7 @@ module.exports = {
     'plugin:prettier/recommended',
     'prettier',
   ],
+  ignorePatterns: ['cypress/**/*'],
   overrides: [
     {
       files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
