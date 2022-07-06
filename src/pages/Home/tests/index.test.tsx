@@ -7,8 +7,8 @@ const renderHome = () => render(<Home />, { wrapper: Router });
 
 describe('<Home/>', () => {
   it('should render <Home/>', () => {
-    const { queryByTestId } = renderHome();
-    expect(queryByTestId(HOME_TEST_ID)).toBeInTheDocument();
+    renderHome();
+    expect(screen.getByTestId(HOME_TEST_ID)).toBeInTheDocument();
   });
 
   it('should render link text', () => {
