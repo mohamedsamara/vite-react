@@ -43,3 +43,15 @@ $ yarn format
 ```
 $ yarn lint
 ```
+
+## Testing with Jest
+
+```
+$ yarn test
+```
+
+## E2E Testing with Cypress
+
+```
+$ yarn cypress:open
+```

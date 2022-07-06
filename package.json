@@ -16,7 +16,9 @@
     "vite",
     "react",
     "react-query",
-    "typescript"
+    "typescript",
+    "@testing-library/react",
+    "cypress"
   ],
   "author": "Mohamed Samara (https://github.com/mohamedsamara)",
   "license": "MIT",
