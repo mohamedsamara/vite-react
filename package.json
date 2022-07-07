@@ -7,8 +7,8 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
-    "lint": "eslint src/",
-    "lint:fix": "eslint --fix 'src/**/*'",
+    "lint": "eslint src/**/*.{ts,tsx}",
+    "lint:fix": "eslint --fix 'src/**/*.{ts,tsx}'",
     "test": "jest",
     "cypress:open": "cypress open"
   },
