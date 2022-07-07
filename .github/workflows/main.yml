@@ -24,10 +24,12 @@ jobs:
         env:
           CI: true
       - name: Run Cypress
-        uses: cypress-io/github-action@v2
+        uses: cypress-io/github-action@v4
         with:
           build: npm run build
           start: npm run preview -- --port=3000
           wait-on: http://localhost:3000
           browser: chrome
+          spec: cypress/e2e/*
+          config-file: cypress.config.ts
           headless: true
