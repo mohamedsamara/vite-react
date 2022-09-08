@@ -24,16 +24,16 @@ const Books = () => {
 
   return (
     <Layout>
-      <div className="h-full container mx-auto my-4">
+      <div className="container h-full mx-auto my-4">
         <SearchForm onSearchSubmit={onSearchSubmit} />
         {books && <BookList books={books} />}
         {!books && !isLoading && (
-          <div className="my-4 flex justify-center">
+          <div className="flex justify-center my-4">
             <p className="text-gray-500">No books found</p>
           </div>
         )}
         {isLoading && (
-          <div className="my-4 flex justify-center">
+          <div className="flex justify-center my-4">
             <Spinner />
           </div>
         )}
