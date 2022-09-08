@@ -1,9 +1,11 @@
 import { useMutation } from 'react-query';
+import { useNavigate } from 'react-router-dom';
 
 import Layout from 'layouts/default';
 import Spinner from 'components/common/Spinner';
 import SearchForm from './components/SearchForm';
 import BookList from './components/BookList';
+import { ArrowLeftIcon } from 'components/Icons';
 
 const fetchBooks = async (search: string) => {
   const response = await fetch(
@@ -13,6 +15,7 @@ const fetchBooks = async (search: string) => {
 };
 
 const Books = () => {
+  const navigate = useNavigate();
   const mutation = useMutation((search: string) => fetchBooks(search));
   const { isLoading, data } = mutation;
 
@@ -22,14 +25,22 @@ const Books = () => {
     mutation.mutate(search);
   };
 
+  const goBack = () => navigate('/');
+
   return (
     <Layout>
-      <div className="container h-full mx-auto my-4">
+      <button
+        className="p-3 text-lg bg-[#f4f4f4] hover:bg-[#eaeaea] rounded-3xl transition-all duration-150 absolute left-5"
+        onClick={goBack}
+      >
+        <ArrowLeftIcon />
+      </button>
+      <div className="container h-full px-6 mx-auto my-4 pt-14">
         <SearchForm onSearchSubmit={onSearchSubmit} />
         {books && <BookList books={books} />}
         {!books && !isLoading && (
           <div className="flex justify-center my-4">
-            <p className="text-gray-500">No books found</p>
+            <p className="text-[#373737] text-lg">No books found</p>
           </div>
         )}
         {isLoading && (

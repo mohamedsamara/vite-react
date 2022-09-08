@@ -1,3 +1,4 @@
+import { CloseIcon } from 'components/Icons';
 import { ChangeEvent, MouseEvent, useState } from 'react';
 
 interface SearchFormProps {
@@ -27,18 +28,19 @@ const Search = (props: SearchFormProps) => {
 
   return (
     <form onSubmit={handleSearchSubmit}>
-      <div className="flex items-center border-b border-gray-500 py-2">
+      <div className="flex items-center py-2 border-b border-gray-500">
         <input
-          className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
+          className="w-full px-2 py-1 mr-3 text-lg leading-tight text-gray-700 bg-transparent border-none appearance-none focus:outline-none"
           type="text"
           placeholder={placeholder}
           aria-label={placeholder}
           value={search}
           onChange={handleOnChange}
         />
+
         <button
           type="submit"
-          className="flex-shrink-0 bg-gray-800 hover:bg-gray-900 text-sm text-white py-2 px-3 rounded"
+          className="flex-shrink-0 py-2 px-3 text-lg bg-[#f1c50e] rounded transition-all	duration-150 min-w-[160px]"
         >
           Search
         </button>
@@ -46,10 +48,10 @@ const Search = (props: SearchFormProps) => {
         {search.length > 0 && (
           <button
             type="button"
-            className="flex-shrink-0 border-transparent border-4 text-gray-500 hover:text-gray-800 text-sm py-1 px-2 rounded"
+            className="flex-shrink-0 px-2 py-1 text-sm text-gray-500 border-4 border-transparent rounded hover:text-gray-800"
             onClick={handleOnClear}
           >
-            X
+            <CloseIcon />
           </button>
         )}
       </div>
