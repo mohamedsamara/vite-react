@@ -13,7 +13,7 @@ describe('<Home/>', () => {
 
   it('should render find books button', () => {
     renderHome();
-    const FindButton = screen.getByRole('button', { name: /Find Books/i });
-    expect(FindButton).toBeInTheDocument();
+    const booksButtonLink = screen.getByRole('button', { name: /Find Books/i });
+    expect(booksButtonLink).toBeInTheDocument();
   });
 });
