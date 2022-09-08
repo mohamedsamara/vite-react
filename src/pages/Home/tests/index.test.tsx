@@ -11,8 +11,9 @@ describe('<Home/>', () => {
     expect(screen.getByTestId(HOME_TEST_ID)).toBeInTheDocument();
   });
 
-  it('should render link text', () => {
+  it('should render find books button', () => {
     renderHome();
-    expect(screen.getByText('Find Books')).toBeInTheDocument();
+    const FindButton = screen.getByRole('button', { name: /Find Books/i });
+    expect(FindButton).toBeInTheDocument();
   });
 });
