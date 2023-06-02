@@ -17,41 +17,41 @@
 ## Start development
 
 ```
-$ yarn dev
+yarn dev
 ```
 
 ## Simple build for production
 
 ```
-$ yarn build
+yarn build
 ```
 
 ## Preview production build
 
 ```
-$ yarn preview
+yarn preview
 ```
 
 ## Format with Prettier
 
 ```
-$ yarn format
+yarn format
 ```
 
 ## Run Linter
 
 ```
-$ yarn lint
+yarn lint
 ```
 
 ## Testing with Jest
 
 ```
-$ yarn test
+yarn test
 ```
 
 ## E2E Testing with Cypress
 
 ```
-$ yarn cypress:open
+yarn cypress:open
 ```
